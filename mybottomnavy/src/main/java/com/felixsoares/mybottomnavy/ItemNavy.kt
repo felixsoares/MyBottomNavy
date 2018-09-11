@@ -2,6 +2,7 @@ package com.felixsoares.mybottomnavy
 
 import android.content.Context
 import android.support.v4.content.ContextCompat
+import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
@@ -146,15 +147,9 @@ class ItemNavy(
         imageView!!.setImageDrawable(ContextCompat.getDrawable(context!!, this.image))
     }
 
-    fun hideAlert() {
-        if (alert != null) {
-            alert!!.visibility = View.GONE
-        }
-    }
-
     fun showAlert() {
         if (alert != null) {
-            alert!!.visibility = View.VISIBLE
+            alert!!.visibility = if (alert!!.visibility == View.VISIBLE) View.GONE else View.VISIBLE
         }
     }
 
@@ -162,7 +157,7 @@ class ItemNavy(
         if (badge != null) {
             if (value > 0) {
                 badge!!.visibility = View.VISIBLE
-                textViewBadge!!.text = if (value >= 100) "+99" else "$value"
+                textViewBadge!!.text = "$value"
             } else {
                 badge!!.visibility = View.GONE
             }

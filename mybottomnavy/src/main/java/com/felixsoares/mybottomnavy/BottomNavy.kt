@@ -51,14 +51,6 @@ class BottomNavy : LinearLayout {
         }
     }
 
-    fun hideAlert() {
-        for (i in 0..(itens.size - 1)) {
-            if (itens[i].hasAlert) {
-                itens[i].hideAlert()
-            }
-        }
-    }
-
     fun showAlert() {
         for (i in 0..(itens.size - 1)) {
             if (itens[i].hasAlert) {
