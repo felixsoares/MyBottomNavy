@@ -2,7 +2,6 @@ package com.felixsoares.mybottomnavy
 
 import android.content.Context
 import android.support.v4.content.ContextCompat
-import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
@@ -157,7 +156,7 @@ class ItemNavy(
         if (badge != null) {
             if (value > 0) {
                 badge!!.visibility = View.VISIBLE
-                textViewBadge!!.text = "$value"
+                textViewBadge!!.text = if (value >= 100) "+99" else "$value"
             } else {
                 badge!!.visibility = View.GONE
             }
