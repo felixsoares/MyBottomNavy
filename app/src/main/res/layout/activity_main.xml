@@ -12,10 +12,17 @@
         android:text="Show Alert" />
 
     <Button
+        android:id="@+id/btnAlert2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btnAlert"
+        android:text="Hide Alert" />
+
+    <Button
         android:id="@+id/btnBadge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btnAlert"
+        android:layout_toEndOf="@+id/btnAlert2"
         android:text="Add random badge" />
 
     <LinearLayout

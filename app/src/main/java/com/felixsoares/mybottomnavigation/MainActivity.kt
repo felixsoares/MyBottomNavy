@@ -25,6 +25,10 @@ class MainActivity : AppCompatActivity(), BottomNavy.OnTabSelectedListener {
             bottomNavy.showAlert()
         }
 
+        btnAlert2.setOnClickListener {
+            bottomNavy.hideAlert()
+        }
+
         btnBadge.setOnClickListener {
             bottomNavy.addBadge(Random().nextInt(99))
         }

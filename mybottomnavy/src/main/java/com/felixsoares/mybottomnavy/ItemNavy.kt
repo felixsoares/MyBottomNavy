@@ -146,9 +146,15 @@ class ItemNavy(
         imageView!!.setImageDrawable(ContextCompat.getDrawable(context!!, this.image))
     }
 
+    fun hideAlert() {
+        if (alert != null) {
+            alert!!.visibility = View.GONE
+        }
+    }
+
     fun showAlert() {
         if (alert != null) {
-            alert!!.visibility = if (alert!!.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+            alert!!.visibility = View.VISIBLE
         }
     }
 
